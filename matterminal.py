@@ -14,7 +14,7 @@ q = esci\n"""
 
 while(True):
     
-    user_input = input("\n"+db.username+"€  ")
+    user_input = input("\n"+db.username()+"€  ")
 
     if(user_input=="info" or user_input=="i"):
         print(info_str)
@@ -23,6 +23,11 @@ while(True):
     
     if(user_input=="font verde"):
         os.system('color 2')    # verde
+        continue
+
+    if(user_input=="username"):
+        nuovo_username = input("nuovo username? ")
+        open("./memoria/username.txt", "w").write(nuovo_username)
         continue
 
     if(user_input=="modifica" or user_input=="m"):

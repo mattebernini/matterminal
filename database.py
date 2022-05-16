@@ -3,7 +3,8 @@ import os
 from termcolor import colored
 import subprocess
 
-username = open("./memoria/username.txt", "r").read()
+def username():
+    return open("./memoria/username.txt", "r").read()
 
 def stampa_comandi():
     with open("./memoria/comandi.csv", newline="") as filecsv:
